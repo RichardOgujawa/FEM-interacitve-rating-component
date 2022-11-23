@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&display=swap');
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    display: grid; 
+    place-items: center;
+    
+    font-family: 'Overpass', sans-serif;
+    
+    background: hsl(216, 12%, 7%);
+}
+
+article {
+    width: fit-content;
+    height: fit-content;
+    padding: 2.5em;
+    border-radius: 1em;
+
+    background-image: linear-gradient(to top, hsl(223deg 10% 9%), hsl(213, 19%, 18%));
+}
+
+svg {
+    padding: 0.75em;
+    border-radius: 100vw;
+
+    fill: orange;
+    background: hsl(217, 12%, 22.5%);
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+ 
+p {
+    width: 40ch;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    
+    color: #fff5;
+    
+    margin-bottom: 2em;
+}
+
+section {
+    margin: 0; 
+    margin-bottom: 2em;
+    padding-inline: 0;
+    border: none;
+    
+    display: flex; 
+    justify-content: space-between;
+}
+
+section > button {
+    /* appearance: none; */
+
+    padding: 2em;
+    aspect-ratio: 1/1;
+    border: none;
+    border-radius: 100vw;
+    line-height: 0;
+    
+    color: #fff5;
+    background: hsl(217, 12%, 22.5%);
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+section > button:hover {
+    color: #fff;
+    background:hsl(25, 97%, 53%);
+}
+
+[type="submit"]{
+    width: 100%;
+    padding: 1em;
+    border: none;
+    border-radius: 50vw;
+    text-transform: uppercase;
+
+    color: #fff;
+    background: hsl(25, 97%, 53%);
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+[type="submit"]:hover {
+    transition: 0.3s ease;
+
+    color:hsl(25, 97%, 53%);
+    background: hsl(0, 0%, 100%);
+}
+
