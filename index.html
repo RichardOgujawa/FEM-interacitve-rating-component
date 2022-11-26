@@ -1,44 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Interactive Rating Component Main</title>
-
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-  <article>
+    <main>
+        <article>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+            </svg>
+        
+            <h1>How did we do?</h1>
+            <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+              offering!</p>
+        
+            <form action="">
+                <fieldset>
+                    <legend class="sr-only">What rating would you give us?</legend>
+                    <label for="rating-1">
+                        <input type="radio" name="rating-score" value="1" id="rating-1">
+                        <span>1</span>
+                    </label>
+                    <label for="rating-2">
+                        <input type="radio" name="rating-score" value="2" id="rating-2">
+                        <span>2</span>
+                    </label>
+                    <label for="rating-3">
+                        <input type="radio" name="rating-score" value="3" id="rating-3">
+                        <span>3</span>
+                    </label>
+                    <label for="rating-4">
+                        <input type="radio" name="rating-score" value="4"id="rating-4">
+                        <span>4</span>
+                    </label>
+                    <label for="rating-5">
+                        <input type="radio" name="rating-score" value="5" id="rating-5">
+                        <span>5</span>
+                    </label>
+                </fieldset>
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24">
-      <path
-        d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-    </svg>
-
-    <h1>How did we do?</h1>
-    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
-      offering!</p>
-
-
-
-    <section>
-      <button type="button">1</button>
-      <button type="button">2</button>
-      <button type="button">3</button>
-      <button type="button">4</button>
-      <button type="button">5</button>
-
-    </section>
-
-    <button type="submit">Submit</button>
-
-  </article>
-
+                <button type="submit">Submit</button>
+            </form>
+        
+        
+          </article>
+    </main>
 </body>
-
 </html>
