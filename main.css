@@ -1,4 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500;600;700&display=swap');
+/*CSS Reset credit https://www.joshwcomeau.com/css/custom-css-reset/*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
 
 body {
     height: 100vh;
@@ -9,7 +67,7 @@ body {
     place-items: center;
     
     font-family: 'Overpass', sans-serif;
-    
+
     background: hsl(216, 12%, 7%);
 }
 
@@ -19,11 +77,15 @@ article {
     padding: 2.5em;
     border-radius: 1em;
 
-    background-image: linear-gradient(to top, hsl(223deg 10% 9%), hsl(213, 19%, 18%));
+    background-image: linear-gradient(to top, hsl(233deg 10% 9%), hsl(233, 19%, 18%));
 }
 
 svg {
-    padding: 0.75em;
+    --radius: 2em;
+    width: var(--radius);
+    height: var(--radius);
+    padding: 0.5em;
+    margin-bottom: 1em;
     border-radius: 100vw;
 
     fill: orange;
@@ -37,7 +99,7 @@ h1 {
 }
  
 p {
-    width: 40ch;
+    width: 32ch;
 
     font-size: 1rem;
     font-weight: 400;
@@ -48,43 +110,73 @@ p {
     margin-bottom: 2em;
 }
 
-section {
+form {
     margin: 0; 
-    margin-bottom: 2em;
     padding-inline: 0;
     border: none;
     
+    display: grid; 
+    gap: 3em;
+}
+
+fieldset {
+    width: calc(100% - 1.5em);
+    margin-inline: auto;
+    border: none;
+    
     display: flex; 
+    align-items: center;
     justify-content: space-between;
 }
 
-section > button {
-    /* appearance: none; */
+label {
+    position: relative; 
+    
+    display: grid; 
+    place-items: center;
+}
 
-    padding: 2em;
+input {
+    appearance: none;
+    margin: 0;
+    padding: 1.5em;
     aspect-ratio: 1/1;
     border: none;
     border-radius: 100vw;
+    font-size: 1rem;
     line-height: 0;
-    
-    color: #fff5;
-    background: hsl(217, 12%, 22.5%);
+
+    position: absolute; 
+
+    background: hsl(217, 12%, 22.5%, 50%);
 
     cursor: pointer;
 
     transition: 0.3s ease;
 }
 
-section > button:hover {
+input + span {
+    position: absolute; 
+
+    color:hsl(217, 12%, 40.5%);
+
+    transition: 0.3s ease;
+}
+
+input:hover + span {
     color: #fff;
+}
+
+input:hover {
     background:hsl(25, 97%, 53%);
 }
 
 [type="submit"]{
     width: 100%;
-    padding: 1em;
+    padding: 0.75em;
     border: none;
     border-radius: 50vw;
+    font-size: 1rem;
     text-transform: uppercase;
 
     color: #fff;
@@ -99,5 +191,15 @@ section > button:hover {
 
     color:hsl(25, 97%, 53%);
     background: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 600px){
+  html {
+    font-size: 13px;
+  }
+  
+  p {
+    width: 35ch;
+  }
 }
 
